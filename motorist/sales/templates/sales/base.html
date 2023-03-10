@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+  <!-- Icon - font-awesome -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--  &lt;!&ndash; Mumble UI &ndash;&gt;-->
+  <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
+<!--  &lt;!&ndash; Dev Search UI &ndash;&gt;-->
+  <link rel="stylesheet" href="{% static 'styles/app.css' %}" />
+
+  <title>ВНЕДОРОЖНИКИ</title>
+</head>
+<body>
+
+{% include 'sales/navbar.html' %}
+{% block content %}{% endblock %}
+<!--{% if messages %}-->
+<!--{% for message in messages %}-->
+<!--<div style="text-align: center">-->
+
+<!--  <div class="alert alert&#45;&#45;{{message.tags}}">-->
+<!--   <p class="alert__message">{{ message }}</p>-->
+<!--  <button class="alert__close">x</button>-->
+<!--  </div>-->
+<!--</div>-->
+{% endfor %}
+{% endif %}

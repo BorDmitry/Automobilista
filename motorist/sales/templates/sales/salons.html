@@ -3,7 +3,7 @@
 
   <main class="salons">
     
-      <h1>Автосалоны</h1>
+      <h1>Найди своего надёжного партнёра</h1>
 
       <div class="block">
           {% for car in cars %}
@@ -11,7 +11,10 @@
             <div>
                 <img src="{{ car.featured_image.url }}" alt="">
             </div>     
-             
+            <div class="text">
+                <h2>{{ car.title }}</h2>
+                <p>{{ car.description }}</p>
+            </div>
           </div>
 
           {% endfor %}

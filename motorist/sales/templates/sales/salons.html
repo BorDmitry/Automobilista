@@ -1,44 +1,20 @@
 {% extends 'sales/base.html' %}
 {% block content %}
-  <!-- Main Section -->
+
   <main class="salons">
-    <section class="hero-section text-center">
-      <div class="container container--narrow">
-        <div class="hero-section__box">
-          <h2><span>Автосалоны</span></h2>
-        </div>
+    
+      <h1>Автосалоны</h1>
 
-        <div class="hero-section__search">
-          <form class="form" action="#" method="get">
-            <div class="form__field">
-              <label for="formInput#search">Search By Projects </label>
-              <input class="input input--text" id="formInput#search" type="text" name="text"
-                placeholder="Поиск по названию бренда" />
-            </div>
-
-            <input class="btn btn--sub btn--lg" type="submit" value="Найти" />
-          </form>
-        </div>
-      </div>
-    </section>
-    <!-- Search Result: DevList -->
-    <section class="projectsList">
-      <div class="container">
-        <div class="grid grid--three">
+      <div class="block">
           {% for car in cars %}
-          <div class="column">
-            <div class="card project">
-              <a href="{% url 'car' cars.id %}" class="cars">
-                <img class="project__thumbnail" src="{{ car.featured_image.url }}" alt="project thumbnail" />
-                <div class="card__body">
-                  <h3 class="project__title">{{ car.title }}</h3>
-                </div>
-              </a>
-            </div>
+          <div class="element">
+            <div>
+                <img src="{{ car.featured_image.url }}" alt="">
+            </div>     
+             
           </div>
+
           {% endfor %}
-        </div>
       </div>
-    </section>
   </main>
 {% endblock %}

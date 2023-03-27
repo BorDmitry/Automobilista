@@ -1,26 +1,22 @@
 {% load static %}
 <!-- Header Section -->
-  <header class="header">
-    <div class="container container--narrow">
-      <a href="{% url 'commercials' %}" class="header__logo">
-        <img src="{% static 'images/logo.svg' %}" alt="DevSearch Logo" />
-      </a>
-      <nav class="header__nav">
-        <input type="checkbox" id="responsive-menu" />
-        <label for="responsive-menu" class="toggle-menu">
-          <span>Menu</span>
-        </label>
-        <ul class="header__menu">
-          <li class="header__menuItem"><a href="{% url 'commercials' %}">Реклама</a></li>
-          <li class="header__menuItem"><a href="#">Марки автомобилей</a></li>
-          <li class="header__menuItem"><a href="{% url 'salons' %}">Автосалоны/ Продажи</a></li>
+  <div class="menu">
+    <div class="wrap">
+      <div class="logo">
+          <a href="{% url 'index' %}">
+            <img src="{% static 'images/logo.svg' %}" alt="DevSearch Logo" />
+          </a>
+      </div>
+      <ul>
+        <li class="header__menuItem"><a href="{% url 'index' %}">Реклама</a></li>
+        <li class="header__menuItem"><a href="#">Марки автомобилей</a></li>
+        <li class="header__menuItem"><a href="{% url 'salons' %}">Автосалоны/ Продажи</a></li>
 <!--          {% if request.user.is_authenticated %}-->
-          <li class="header__menuItem"><a href="#">Объявления частных лиц</a></li>
-          <li class="header__menuItem"><a href="#" class="btn btn--sub">Выйти</a></li>
+        <li class="header__menuItem"><a href="#">Объявления частных лиц</a></li>
+        <li class="header__menuItem"><a href="#" class="btn btn--sub">Выйти</a></li>
 <!--          {% else %}-->
-          <li class="header__menuItem"><a href="#" class="btn btn--sub">Авторизация/ Регистрация</a></li>
+        <li class="header__menuItem"><a href="#" class="btn btn--sub">Авторизация/ Регистрация</a></li>
 <!--          {% endif %}-->
-        </ul>
-      </nav>
+      </ul>
     </div>
-  </header>
+  </div>

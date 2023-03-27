@@ -9,16 +9,11 @@
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
-  <!-- Icon - font-awesome -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<!--  &lt;!&ndash; Mumble UI &ndash;&gt;-->
-  <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
-<!--  &lt;!&ndash; Dev Search UI &ndash;&gt;-->
-  <link rel="stylesheet" href="{% static 'styles/app.css' %}" />
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
 
   <title>ВНЕДОРОЖНИКИ</title>
 </head>
-<body>
+<body class="body">
 
 {% include 'sales/navbar.html' %}
 {% block content %}{% endblock %}

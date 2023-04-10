@@ -1,0 +1,24 @@
+{% extends 'sales/base.html' %}
+{% load static %}
+{% block content %}
+
+<li class="rang"><a href="https://автосалоны-россии.рф/" target="_blank">Рейтинг автосалонов России</a></li>
+<h2>Каталог внедорожников</h2>
+
+<div class="block">
+    {% for project in projects %}
+    <div class="element">
+        <div>
+          <img src="{{ project.featured_image.url }}" alt="">
+        </div>
+        <div class="text">
+            <a href="#" class="h" target="_blank">{{ project.title }}</a>
+            <p>{{ project.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
+

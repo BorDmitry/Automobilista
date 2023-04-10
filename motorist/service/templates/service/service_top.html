@@ -1,0 +1,25 @@
+{% extends 'sales/base.html' %}
+{% load static %}
+{% block content %}
+<div class="menu">
+    <div class="wrap_2">
+        <ul>
+            <li><a href="#" target="_blank">Виды работ</a></li>
+            <li><a href="#" target="_blank">Сделать заказ</a></li>
+            <li><a href="#" target="_blank">Мой Заказ</a></li>
+
+        </ul>
+    </div>
+</div>
+    <div class="img">
+        <img src="avtoservice.jpg" alt="">
+    </div>
+<div>
+    <form action="#" method="post">
+        {% csrf_token %}
+        <button class="top_2">Оставить отзыв</button>
+    </form>
+</div>
+{% endblock %}
+
+

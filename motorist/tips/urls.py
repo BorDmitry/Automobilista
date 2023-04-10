@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 
 
-# Auth
+# страница полезных советов
 urlpatterns = [
-    path('tips/', views.tips, name='tips'),
+    path('car_tips/', views.tips, name='tips'),
 ]

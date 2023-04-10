@@ -1,0 +1,29 @@
+{% extends 'sales/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+ <div class="menu">
+    <div class="wrap-1">
+        <ul>
+            <li about="#">Большие дороги для больших машин</li>
+            <li id="news" about="#">Внедорожники - последние новости</li>
+        </ul>
+        <div class="img">
+            <img src="{% static 'sales/maxresdefault.jpg' %}" alt="">
+        </div>
+        <ul class="test_dr">
+            <li><a href="https://yandex.ru/video/preview/2013323291148266231">Тест-драйв FORD F-350</a></li>
+            <li><a href="https://yandex.ru/video/preview/14520783908999823722">Тест-драйв УАЗ Хантер </a></li>
+            <li><a href="https://yandex.ru/video/preview/2491694692340624626">Тест-драйв Chevrolet Tahoe</a></li>
+            <li><a href="https://yandex.ru/video/preview/14837268310400350551">Тест-драйв Jeep Wrangler 392 Rubicon</a></li>
+            <li><a href="https://www.youtube.com/watch?v=iuvZ9AO2DMs">Тест-драйв volkswagen touareg</a></li>
+        </ul>
+          <div class="img">
+            <img src="{% static 'sales/ford-f-450-f-450-ford-super-duty.jpg' %}" alt="">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

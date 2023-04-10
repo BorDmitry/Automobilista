@@ -21,8 +21,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('sales.urls')),                #  реклама внежников, продажи автосалонов
-    # path('service/', include('service.urls')),      #  обслуживание автомоб.
-    # path('users/', include('users.urls')),          # пользователи
+    path('service_top/', include('service.urls')),      #  обслуживание автомоб.
+    path('login/', include('users.urls')),          # пользователи
     # path('tips/', include('tips.urls')),            # пользователи
     # path('tips_chat/', include('tips_chat.urls')),  # пользователи
 ]

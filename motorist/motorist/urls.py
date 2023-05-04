@@ -23,8 +23,8 @@ urlpatterns = [
     path('', include('sales.urls')),                #  реклама внежников, продажи автосалонов
     path('service_top/', include('service.urls')),      #  обслуживание автомоб.
     path('login/', include('users.urls')),          # пользователи
-    # path('tips/', include('tips.urls')),            # пользователи
-    # path('tips_chat/', include('tips_chat.urls')),  # пользователи
+    path('tips/', include('tips.urls')),
+    path('tips_chat/', include('tips_chat.urls')),  # пользователи
 ]
 
 if settings.DEBUG:

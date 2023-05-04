@@ -1,0 +1,40 @@
+{% extends 'sales/base.html' %}
+{% load static %}
+{% block content%}
+
+<div class="current">/ Главная / Автосалон</div>
+<div class="container">
+    <div class="car">
+        <div class="featured_image">
+            <img src="{{ project.featured_image.url }}" alt="" class="car_foto">
+        </div>
+         <div class="test_d">
+            <a href="https://yandex.ru/video/preview/11536412173204906215">Test-Drive</a>
+        </div>
+        <div class="car_body">
+             <h2 class="Car Car_title">{{ project.title }}</h2>
+             <div class="Car Car_info">{{ project.description }}</div>
+            <p>{{ project.power}}</p>
+            <p>{{ project.cylinder_volume }}</p>
+            <p>{{ project.fuel }}</p>
+            <p>{{ project.year }}</p>
+            <p>{{ project.price }}</p>
+        </div>
+        {% if user.is_superuser %}
+        <a href="#" class="Car">Ordered by {{ project.owner.name }}</a>
+        {% endif %}
+        {%  if user.is_authenticated %}
+        <form method="post" class="bg">
+        {% csrf_token %}
+        {{ form.as_p }}
+            <div class="center">
+                <a class="settings_btn" href="{% url 'create-client' %}">
+                <h2><button class="btn">Заказать</button></h2>
+                </a>
+            </div>
+        </form>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

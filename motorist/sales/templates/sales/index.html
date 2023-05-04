@@ -2,26 +2,55 @@
 {% load static %}
 {% block content %}
 
-
-
- <div class="menu">
-    <div class="wrap-1">
-        <ul>
-            <li about="#">Большие дороги для больших машин</li>
-            <li id="news" about="#">Внедорожники - последние новости</li>
-        </ul>
-        <div class="img">
-            <img src="{% static 'sales/maxresdefault.jpg' %}" alt="">
+ <div class="index">
+    <div class="current">/ Главная</div>
+    <h2 class="box">Большие дороги для больших машин</h2>
+    <div class="cont">
+        <div class="context">
+            <ul class="box2">
+                <li class="boxing"><a href="{% url 'newss' %}" target="_blank">Внедорожники - последние новости</a></li>
+                <li class="boxing"><a href="#" target="_blank">Новинки внедорожников 2023-2024 года</a></li>
+                <li class="boxing"><a href="{% url 'test_drive' %}" target="_blank">Тест-драйвы по моделям</a></li>
+            </ul>
         </div>
-        <ul class="test_dr">
-            <li><a href="https://yandex.ru/video/preview/2013323291148266231">Тест-драйв FORD F-350</a></li>
-            <li><a href="https://yandex.ru/video/preview/14520783908999823722">Тест-драйв УАЗ Хантер </a></li>
-            <li><a href="https://yandex.ru/video/preview/2491694692340624626">Тест-драйв Chevrolet Tahoe</a></li>
-            <li><a href="https://yandex.ru/video/preview/14837268310400350551">Тест-драйв Jeep Wrangler 392 Rubicon</a></li>
-            <li><a href="https://www.youtube.com/watch?v=iuvZ9AO2DMs">Тест-драйв volkswagen touareg</a></li>
-        </ul>
-          <div class="img">
-            <img src="{% static 'sales/ford-f-450-f-450-ford-super-duty.jpg' %}" alt="">
+        <div class="box1">
+            <img src="{% static 'sales/Ford F-150.jpg' %}" alt="">
+         </div>
+        <div class="box1">
+            <img src="{% static 'sales/jeepWR.jpg' %}" alt="">
+        </div>
+         <div class="context">
+             <ul class="box2">
+                 <li class="boxing"><a href="https://samoform.ru/avto/jeep-wrangler-rubicon-392" target="_blank">
+                     Обзор Jeep Wrangler Rubicon 392 с Hemi V-8 мощностью 470 лс</a></li>
+             </ul>
+        </div>
+        <div class="box1">
+            <img src="{% static 'sales/exeed900x600.jpg' %}" alt="">
+        </div>
+        <div class="context">
+
+             <ul class="box2">
+                <li class="boxing"><a href='https://www.autonews.ru/news/644bbbb19a7947149c743599'
+                                      target="_blank">Exeed показал кроссовер RX для России</a></li>
+             </ul>
+        </div>
+        <div class="context">
+              <ul class="box2">
+                  <li class="boxing"><a href='https://yandex.ru/video/preview/10587266002371389521'
+                                      target="_blank">Новые автомобильные хитрости</a></li>
+                  <li class="boxing"><a href='https://yandex.ru/video/preview/12563320334892765942'
+                                      target="_blank">Как выбрать домкрат</a></li>
+                  <li class="boxing"><a href='https://dzen.ru/a/Y6AzumIaShVTvvEN'
+                                      target="_blank">Новые штрафы в 2023 году: какие изменения ждут водителей</a></li>
+                  <li class="boxing"><a href='https://www.autonews.ru/news/61cc1c359a7947ef29535033'
+                                      target="_blank">Техосмотр 2023: всё, что нужно знать водителям</a></li>
+                  <li class="boxing"><a href='https://wheelnews.ru/samye-problemnye-avtomobili-s-probegom/'
+                                      target="_blank">Список самых проблемных моделей с пробегом</a></li>
+              </ul>
+        </div>
+         <div class="box1">
+            <img src="{% static 'sales/F150_mar.jpg' %}" alt="">
         </div>
     </div>
 </div>

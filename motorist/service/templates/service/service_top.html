@@ -1,21 +1,62 @@
 {% extends 'sales/base.html' %}
 {% load static %}
 {% block content %}
+
 <div class="menu">
     <div class="wrap_2">
-        <ul>
-            <li><a href="#" target="_blank">Виды работ</a></li>
-            <li><a href="#" target="_blank">Сделать заказ</a></li>
-            <li><a href="#" target="_blank">Мой Заказ</a></li>
+        <div class="current">/ Главная / Автосервис / Категории работ</div>
+        <ul class="service">
+            {%  if user.is_authenticated %}
 
+            <li><a href="{% url 'service_top' %}" target="_blank">Категории работ</a></li>
+            <li><a href="#" target="_blank">О НАС</a></li>
+            <li><a href="{% url 'price_list' %}" target="_blank">Услуги и цены</a></li>
+            <li><a href="#" target="_blank">Сделать заказ</a></li>
+            <li><a href="{% url 'inbox' %}" target="_blank">Сообщенния
+            </a></li>
+
+            <li  ><a href="#" target="_blank">Отзывы</a></li>
+            <li><a href="#" target="_blank">+7(917)050-93-58</a></li>
+            {% endif %}
         </ul>
+        <hr style: color="violet">
+        <div class="service-header">Автотехцентр Внедорожник Поволжья</div>
+        <div class="service_works">Вид работ
+            ремонт двигателя, сход-развал, заправка кондиционера, ремонт АКПП, ремонт электрооборудования, ремонт подвески, ремонт кондиционеров, ремонт дизельных двигателей, ремонт выхлопных систем, замена масла, слесарный ремонт, мелкосрочный ремонт, ремонт электронных систем управления автомобиля
+            Рулевой механизм
+            ремонт рулевой рейки, замена рулевой рейки, ремонт ГУР, замена рулевой тяги, замена рулевых наконечников, замена рулевого вала, установка ГУР, замена ремня ГУР, ремонт рулевого управления, замена пыльника рулевой рейки, замена пыльника рулевой тяги, ремонт рулевых тяг и наконечников
+            Тип
+            автозапчасти, автостанция, автомастерская
+            Тюнинг
+            установка противотуманных фар, обработка кузова воском, обработка стекол антидождь
+            Шиномонтаж
+            шиномонтаж, замена колес, подкачка шин, чернение резины
+        </div>
+        <div class="service">
+            <a href="https://mynnov.ru/mesto/avtocentr-chisto-servis-na-ulice-litvinova" class="g1nn-result__image ">
+             <img src="https://mynnov.ru/resized/org/583/2583/310z170_crop_Avtocentr-CHisto-Servis-na-CHkalovskoy_4.webp"
+              alt="Автоцентр Чисто-Сервис на Чкаловской фотография 4" title="Автоцентр Чисто-Сервис на Чкаловской фотография 4">
+            </a>
+        </div>
+      <div class="price">
+        Цены автотехцентра Феникс Авто на улице Антонова
+        Категория
+        Автоэлектрика
+        Автомойка
+        Турбосушка
+        Ремонтные работы
+        Техническое обслуживание
+        Ремонт ГУР и рулевых реек
+        Обслуживание климат контроля и кондиционера
+        Диагностика
+        Цена, ₽
+        от 30 до 7000
+      </div>
     </div>
 </div>
-    <div class="img">
-        <img src="avtoservice.jpg" alt="">
-    </div>
-<div>
-    <form action="#" method="post">
+<div class="top_review">
+    <p>Отзывы об автотехцентре Внедорожник Поволжья</p>
+    <form action="{% url 'review' %}" method="post">
         {% csrf_token %}
         <button class="top_2">Оставить отзыв</button>
     </form>

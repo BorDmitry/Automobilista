@@ -6,12 +6,12 @@ body{
     font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
-    background: #8cf0d7;
+    background: #adefde;
 }
-.wrap {
+.wrap{
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     background: #c0b1ee;
 }
@@ -25,6 +25,7 @@ body{
 ul>li{
     justify-content: space-evenly;
 }
+/* cars */
 .block{
     display: flex;
     flex-wrap: wrap;
@@ -54,7 +55,9 @@ ul>li{
     text-align: center;
     margin: 20px 0;
     font-size: 30px;
-   
+}
+.wrap + h2{
+    margin: 10px auto 10px;
 }
 .img{
     text-align: center;
@@ -69,27 +72,22 @@ ul>li{
     border-bottom: 5px solid #FFF;
     justify-items: center;
 }
-.menu .wrap {
+.menu .wrap .wrap_2 .wrap-1{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    text-align: center;
+    text-shadow: 5px;
 }
-.wrap_2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .menu ul{
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     font-size: 30px;
-
 }
 .menu li{
-    margin: 20px;
+    margin: 10px;
 }
 .menu a{
     color: #3d16b0;
@@ -104,11 +102,43 @@ ul>li{
 #user{
     font-size: 0.5em;
 }
+
+/*======== car======== */
+.Car{
+    border-radius: 7px;
+    margin: 20px 100px;
+    font-size: 40px;
+}
+.car_body{
+    background: #c0b1ee; 
+}
 .btn{
     border-radius: 7px;
-    height: 40px;
-    width: 450px;
-    font-size: 20px;
+    height: 80px;
+    width: 600px;
+    font-size: 40px;
+    background: #c0b1ee;
+}
+.car_body {
+    display: inline-block;
+    margin: 40px 100px;
+    padding: 10px;
+    font-size: 30px;
+}
+.car_foto{
+    margin: 40px 100px;
+    padding: 20px;
+}
+.test_d{
+    display: inline-block;
+    font-size: 30px;
+    margin: 100px;
+}
+.current{
+    margin: 20px 20px;
+    font-size: 24px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 #id_username{
     width: 265px;
@@ -119,13 +149,12 @@ ul>li{
     width: 250px;
     height: 30px;
     border-radius: 7px;
-
 }
 .bg,.register{
     display: grid;
     justify-items: center;
     font-size: 20px;
-    margin-top: 70px;
+    margin: 0px auto 40px;
 }
 .auth{
     padding: 20px;
@@ -141,7 +170,7 @@ ul>li{
 .top:hover{
     background: #9bf0ec;
     letter-spacing: 6px;
-    border-color: 2px solid black;
+    border: 2px solid black;
 }
 .test_dr{
     display: flex;
@@ -149,45 +178,254 @@ ul>li{
     justify-content: space-between;
     align-items: center;
 }
-
 .logo_box{
     display: flex;
     flex-direction: column;
     margin-left: 0;
 }
-.rang{
-    font-size: 1.5em;
-    margin-left: 60px;
-    
-}
 .review{
     font-size: 20px;
 }
-
 .a{
     border: 2px black solid;
     height: 40px;
     width: 100px;
     border-radius: 7px;
     padding: 5px;
-    
 } 
 li{
-padding: 10px;
-margin:  20px 20px;
-list-style: none;
+    padding: 10px;
+    margin:  10px 20px;
+    list-style: none;
 }
-li > a{
- 
+li> a{
     text-decoration: none;
 }
-h2{
-    margin-left: 70px;
+.top_2{
+    height: 45px;
+    width: 220px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 2px solid black;
+    margin: 20px;
+}
+.top_2:hover{
+    box-shadow: #3d16b0 3px;
+}
+.top_review{
+    height: 25px;
+    width: 400px;
+    font-size: 20px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+} 
+
+/*====== автосервис =======*/
+ul.service +li {
+    margin: 30px 0px 30px;
+    justify-content: space-evenly;
+    color: blue;
+}
+.top_2{
+    margin-top: 20px20px 20px 250px;
+    background: #bcabee;
+    width: 600px;
+    height: 80px;
+    font-size: 30px;
+}
+.top_review{
+    width: 600px;
+    height: 80px;
+    justify-content: center;
+    text-align: center;
+}
+.top_review >p{
+    margin-left: 60px;
+}
+.service_works{
+    width: 900px;
+    height: 300px;
+    padding: 20px;
+     font-size: 24px;
+       margin-left: 60px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.service-header{
+    font-size: 50px;
+    margin-left: 60px;
+    padding: 20px;
+    width: 940px;
+    height: 100px;
+}
+.price{
+    width: 500px;
+    height:200px;
+    margin: 20px;
+    padding: 10px;
+    font-size: 24px;
+    display: inline-block;
+}
+.service{
+    display: inline-block;
+    background: #f5f09e;
+    font-size: 30px;
+    margin: 20px;
+    padding: 5px;
+}
+
+/*  */
+.ul_index{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 30px;
+}
+.index{
+    font-size: 30px;
+    margin: auto;
+    justify-items: center;
+}
+
+/* tests-drive */
+.tests{
+    margin-left: 50px;
+}
+.text-align{
+    text-align:center
+}
+.alert{
+    background: rgb(243, 131, 196);
+}
+.wrap-1 h2{
+    justify-items: center;
+}
+ul_1{
+    width: 300px;
+    height: 500px;
+}
+.img{
+    align-items: center;
+    justify-items: center;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+/*главная index  */
+.cont{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+    justify-content:space-around;
+    justify-items:center;
+}
+.cont>img{
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.box{
+    text-align: center;
+    font-size: 45px;
+}
+.box1{
+    margin: 20px;
+    padding: 5px;
+}
+ul.box2{
+    display: inline-block;
+    background: #FFF;
+    font-size: 30px;
+    margin: 20px;
+    padding: 5px;
+    align-items: center;
+}
+.context{
+    text-align: center;
 }
 
 
+#breadcrumb {
+    color: #c30e0e;
+}
 
+/* советы tips */
+.page_t{
+    margin: 20px 60px 20px;
+}
+.page-title{
+   text-align: center; 
+}
 
+/* newss */
+.text_news{
+    width: 850px;
+    height: 650px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+}
+.text_news >p{
+    font-size: 24px;
+}
+.element_news{
+    display: grid;
+    grid-template-columns: 900px 900px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    gap: 10px;
+}
+.alert_message{
+    font-size: 30px;
+}
+h2{
+    margin: 20px;
+    padding: 10px;
+}
 
+/* tips */
+#title_tips{
+    font-size: 24px;
+    margin: 20px;
+    color: rgb(16, 26, 216);
+}
+.tip{
+    margin: 20px;
+    padding: 10px;
 
+}
 
+/* tips_chat */
+.inbox_title{
+    margin: 20px;
+    padding: 10px;
+}
+/* forms */
+.form{
+    width: 1000px;
+    height: 600px;
+    margin: 20px;
+    padding: 10px;
+    font-size: 30px;
+    justify-items: center;
+    justify-content: center;
+}
+.input{
+    width: 600px;
+    height: 80px;
+    margin-left: 100px;
+    border-radius: 10px;
+}
+.btn--sub{
+    border-radius: 10px;
+    height: 80px;
+    width: 200px;
+    font-size: 40px;
+    margin-left: 400px;
+}

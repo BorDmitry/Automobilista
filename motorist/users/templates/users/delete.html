@@ -1,0 +1,21 @@
+{% extends 'sales/base.html' %}
+{% block content %}
+<h2>удаление</h2>
+
+
+<main class="container">
+    <div class="content-box">
+      <div class="formWrapper">
+        <br>
+
+        <form class="form" method="POST">
+          {% csrf_token %}
+          <p>Are you sure you want to delete <b>"{{ object }}"</b>?</p>
+          <a class="btn" href="#">&#x2190 Go Back</a>
+          <input type="submit" class="btn" value="Delete" />
+        </form>
+      </div>
+    </div>
+</main>
+
+{% endblock %}

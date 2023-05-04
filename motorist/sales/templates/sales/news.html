@@ -1,14 +1,17 @@
 {% extends 'sales/base.html' %}
 {% load static %}
 {% block content %}
-div.block
-<div class="block">
-    <div class="news">
-        <ul>
-            <li></li>
-        </ul>
-    </div>
+<div class="current">
+    / Главная /<a href="{% url 'newss' %}" target="_blank">Новости/</a>
 </div>
-
+<div class="block">
+        <div class="news">
+                <img src="{{ project.image.url }}" alt="" class="news">
+                <div class="news_body">
+                    <h2>{{ project.title }}</h2>
+                    <p>{{ project.description }}</p>
+                </div>
+        </div>
+</div>
 
 {% endblock %}

@@ -1,24 +1,43 @@
 {% extends 'sales/base.html' %}
 {% load static %}
 {% block content %}
-
+<div class="current">/ Главная / Автосалон</div>
 <li class="rang"><a href="https://автосалоны-россии.рф/" target="_blank">Рейтинг автосалонов России</a></li>
-<h2>Каталог внедорожников</h2>
+
+<h1 class="box">Каталог внедорожников</h1>
 
 <div class="block">
     {% for project in projects %}
     <div class="element">
-        <div>
-          <img src="{{ project.featured_image.url }}" alt="">
-        </div>
+        <a href="{% url 'car' project.id %}" target="_blank" class="car">
+          <img src="{{ project.featured_image.url }}" alt=""/>
+        </a>
         <div class="text">
-            <a href="#" class="h" target="_blank">{{ project.title }}</a>
-            <p>{{ project.description }}</p>
+            <h3><a href="{% url 'car' project.id %}" target="_blank">{{ project.title }}</a></h3>
+            <p>{{ project.description|slice:"130" }}...</p>
+            {% if user.is_superuser %}
+            <p><a class="project__author" href="#">
+                Ordered by {{ project.owner.name }}</a></p>
+            {% endif %}
         </div>
     </div>
     {% endfor %}
-</div>
-
+<!--     <div class="pagination">-->
+<!--      <ul class="container">-->
+<!--        <li><a href="#" class="btn btn&#45;&#45;disabled">&#10094; Prev</a></li>-->
+<!--        <li><a href="#" class="btn btn&#45;&#45;sub">01</a></li>-->
+<!--        <li><a href="#" class="btn">02</a></li>-->
+<!--        <li><a href="#" class="btn">03</a></li>-->
+<!--        <li><a href="#" class="btn">04</a></li>-->
+<!--        <li><a href="#" class="btn">05</a></li>-->
+<!--        <li><a href="#" class="btn">06</a></li>-->
+<!--        <li><a href="#" class="btn">07</a></li>-->
+<!--        <li><a href="#" class="btn">08</a></li>-->
+<!--        <li><a href="#" class="btn">09</a></li>-->
+<!--        <li><a href="#" class="btn">10</a></li>-->
+<!--        <li><a href="#" class="btn">Next &#10095;</a></li>-->
+<!--      </ul>-->
+    </div>
 {% endblock %}
 
 

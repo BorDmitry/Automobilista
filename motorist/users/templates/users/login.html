@@ -1,9 +1,8 @@
 {% extends 'sales/base.html' %}
-
 {% block content%}
 
 <h1>Авторизация</h1>
-<h2>{{ error }}</h2>
+
 <form method="post" class="bg">
     {% csrf_token %}
     {{ form.as_p }}
@@ -11,5 +10,12 @@
       <button class="btn">Авторизация</button>
     </div>
 </form>
+{% if error %}
+<div style="backgraund: rgb(243, 131, 196)">
+    <div class="alert">
+        <h2>{{ error }}</h2>
+    </div>
+</div>
+{% endif %}
 
 {%  endblock %}

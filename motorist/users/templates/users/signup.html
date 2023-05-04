@@ -1,8 +1,8 @@
 {% extends 'sales/base.html' %}
 {% load static %}
-
 {% block content %}
 
+<h2>{{ error }}</h2>
 <h1>Регистрация:</h1>
 <form method="post" class="register">
     {% csrf_token  %}

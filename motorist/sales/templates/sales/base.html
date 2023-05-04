@@ -5,12 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="icon" type="image/x-icon" href="{% static 'sales/faviconCar.ico' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/faviconCar.ico' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 </head>
 <body>
 
 {%  if user.is_authenticated %}
+
 <div class="menu">
     <div class="wrap">
         <ul class="logo_box">
@@ -24,16 +26,34 @@
         </ul>
         <ul class="navbar">
              <li><a href="{% url 'index' %}">Главная</a></li>
-             <li><a href="{% url 'cars' %}">Автосалоны</a></li>
-             <li><a href="{% url 'private_car' %}" target="_blank">Частные объявления</a></li>
-             <li><a href="{% url 'service_top' %}" target="_blank">Автосервис</a></li>
-        </ul>
+             <li><a href="{% url 'cars' %}">Автосалон</a></li>
 
+             <li><a href="{% url 'account' %}">Аккаунт</a></li>
+             <li><a href="{% url 'service_top' %}" target="_blank">Автосервис</a></li>
+             <li><a href="{% url 'service_top' %}" target="_blank">Заказ автосервиса</a></li>
+             <li><a href="{% url 'tips' %}" target="_blank">Советы</a></li>
+             <li><a href="{% url 'inbox_chat' %}" target="_blank">Чат автолюбителей</a></li>
+             {% if user.is_superuser %}
+             <li><a href="{% url 'create-client' %}">Добавить авто</a></li>
+             <li><a href="{% url 'profiles' %}" target="_blank">Клиенты</a></li>
+             {% endif %}
+        </ul>
     </div>
 </div>
 {% else %}
+{% if messages %}
+{% for message in messages  %}
+<div style="text-align: center; margin-top: 20px; background: rgb(243, 131, 196)">
+    <div class="alert">
+        <p class="alert_message">{{ message }}</p>
+        <button class="alert_close">x</button>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+
 <div class="menu">
-    <div class="wrap">
+    <div class="wrap-2">
          <ul class="logo_box">
             <li class="user"><a href="{% url 'signupuser' %}" target="_blank">Регистрация</a></li>
             <li>
@@ -51,11 +71,8 @@
 
     </div>
 </div>
+
 {% endif %}
-
         {% block content %} {% endblock %}
-    </div>
-</div>
-
 </body>
 </html>
